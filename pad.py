@@ -9,5 +9,9 @@ class Pad(Turtle):
         self.speed("fastest")
     def up(self):
         self.goto(self.xcor(),self.ycor()+15)
+        if self.ycor()>280 or self.ycor()<-280:
+            self.undo()
     def down(self):
         self.goto(self.xcor(),self.ycor()-15)
+        if self.ycor()>280 or self.ycor()<-280:
+            self.undo()
